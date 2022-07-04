@@ -1,13 +1,29 @@
 # Painter_project
-Simple blog project for painter (Symfony 6)
 
+Painter is a site that helps a painter to publish his works
 
-## Installation
+# Development environment
 
-Use the Symfony console  to install this project.
+## Prerequisites
+
+* PHP 8.1.6
+* Symfony CLI
+* Mysql version 10+ (XAMP or ...)
+* Composer
+
+You can check the prerequisites via the following command (by Symfony CLI):
+
 
 ```bash
-symfony new Painter --full
+symfony check:requirements
+```
+
+## Launch the development environment
+
+```bash
+symfony console:database:create
+
+symfony serve -d
 ```
 
 ## Usage
