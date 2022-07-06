@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body id="body">
+        {# {% if app.user %}
+                    <div class="mb-3">
+                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+        {% endif %} #}
+
+        <div class="about pricing-table section-card bg-gray contact-form  bg-3 ">
+        <div class="container mx-auto text-light">
+            <h1 class="h3 mb-3 font-weight-normal text-center text-light">Open a session</h1>
+            <p class="mb-3 font-weight-normal text-center text-light">Website administration</p>
+            <form method="post" class="row justify-content-center" id="contact-form">
+                        <div class="col-md-5 col-sm-12 pricing-item">
+                            <div class="block">
+                            {% if error %}
+                                <div class="alert alert-danger" >{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+                            <div class="form-group">
+                                <input  placeholder="Email" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input  placeholder="Password"
+                                type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                            </div>
+                            <input type="hidden" name="_csrf_token"
+                            value="{{ csrf_token('authenticate') }}">
+                            <button class="btn btn-default" type="submit">Open a session</button>
+                        </div>
+                        </div>
+
+                    </form>
+
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                #}
+
+                {# <button class="btn btn-lg btn-primary" type="submit">
+                    Sign in
+                </button> #}
+
+        </div>
+        
+        </div>
+    </body>
+</html>
