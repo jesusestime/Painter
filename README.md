@@ -21,6 +21,10 @@ symfony check:requirements
 ## Launch the development environment
 
 ```bash
+composer install
+
+npm install
+
 symfony console:database:create
 
 symfony serve -d

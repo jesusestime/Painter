@@ -12,4 +12,27 @@ import './styles/app.scss';
 import './bootstrap';
 
 //import Bootstrap componements
-import 'bootstrap';
+
+
+//animate-css
+import 'animate.css';
+
+//magnific popup
+import 'magnific-popup';
+
+//shuffle
+import 'shuffle';
+
+//slick
+import 'slick';
+
+//google-maps;
+import 'google-maps';
+
+//jquery-syo-timer
+import 'jquery-syotimer';
+
+//jquery
+import 'jquery';
+
+import './js/script'
