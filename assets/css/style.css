@@ -2625,6 +2625,9 @@ ul.dropdown-menu li {
 .footer .footer-manu ul li a:hover {
   color: #000;
 }
+.footer .footer-hover ul li a:hover {
+  color: #000;
+}
 .footer .copyright a {
   font-weight: 600;
 }
