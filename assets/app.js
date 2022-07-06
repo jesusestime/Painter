@@ -12,7 +12,8 @@ import './styles/app.scss';
 import './bootstrap';
 
 //import Bootstrap componements
-
+// You can specify which plugins you need
+import 'bootstrap';
 
 //animate-css
 import 'animate.css';

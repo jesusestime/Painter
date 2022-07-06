@@ -2086,6 +2086,11 @@ ul.dropdown-menu li {
   background-size: cover;
   background-attachment: fixed;
 }
+.bg-3 {
+  background: url("../images/paint-4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 .widget {
   margin-bottom: 30px;
@@ -2623,6 +2628,9 @@ ul.dropdown-menu li {
   color: #494949;
 }
 .footer .footer-manu ul li a:hover {
+  color: #000;
+}
+.footer .footer-hover ul li a:hover {
   color: #000;
 }
 .footer .copyright a {
