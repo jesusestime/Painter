@@ -7,69 +7,25 @@
 		<hr class="mt-5">
     </div>
 <section>
-
-<section class="about pricing-table section-card bg-gray">
-	<div class="container pricing-item p-0 ">
-		<div class="row align-items-center card-body">
-			<div class="col-lg-6">
-				<div class="about-img">
-					<img class="img-fluid" src="img/paint-1.jpg">
+{% for p in paints %}
+	<section class="about pricing-table section-card bg-gray">
+		<div class="container pricing-item p-0 ">
+			<div class="row  card-body">
+				<div class="col-lg-6">
+					<div class="about-img">
+						<img class="img-fluid" src="{{ p.file }}">
+					</div>
 				</div>
-			</div>
-			<div class="col-lg-6 mt-lg-0 ">
-				<div class="pl-0 pl-lg-4 animated fadeInUp">
-					<h2>We strive to be the best and <br> make awesome work.</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam
-						iure officiis facere vitae itaque.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est.</p>
-					<a href="" class="btn btn-small mt-0">View paint</a>
-				</div>
-			</div>
-		</div>
-    </div>
-<section>
-
-
-<section class="about pricing-table section-card bg-gray">
-	<div class="container pricing-item p-0">
-		<div class="row align-items-center card-body">
-			<div class="col-lg-6">
-				<div class="about-img">
-					<img class="img-fluid " src="img/paint-1.jpg">
-				</div>
-			</div>
-			<div class="col-lg-6  mt-lg-0">
-				<div class="pl-0 pl-lg-4 animated fadeInUp">
-					<h2>We strive to be the best and <br> make awesome work.</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam
-						iure officiis facere vitae itaque.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est
-						velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
-					<a href="" class="btn btn-small">View paint</a>
+				<div class="col-lg-6 mt-lg-0 ">
+					<div class="pl-0 pl-lg-4 animated fadeInUp">
+						
+						<h2>{{ p.name }}</h2>
+						<small class=""><i class="ion-calendar"></i>  Posted {{ p.createdat |ago}}</small>
+						<p>{{ p.description|u.truncate(200,'...',false) }}</p>
+						<a href="" class="btn btn-small mt-0">View paint</a>
+					</div>
 				</div>
 			</div>
 		</div>
-    </div>
-<section>
-
-<section class="about pricing-table section-card bg-gray">
-	<div class="container pricing-item p-0">
-		<div class="row align-items-center card-body">
-			<div class="col-lg-6">
-				<div class="about-img">
-					<img class="img-fluid " src="img/paint-1.jpg">
-				</div>
-			</div>
-			<div class="col-lg-6  mt-lg-0">
-				<div class="pl-0 pl-lg-4 animated fadeInUp">
-					<h2>We strive to be the best and <br> make awesome work.</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam
-						iure officiis facere vitae itaque.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est
-						velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
-					<a href="" class="btn btn-small">View paint</a>
-				</div>
-			</div>
-		</div>
-    </div>
-<section>
+	<section>
+{% endfor %}
