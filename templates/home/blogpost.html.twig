@@ -21,7 +21,7 @@
 							<small class=""><i class="ion-calendar"></i>  Posted {{ b.createdat |ago}}</small>
 						</div>
 						<div class="post-content">
-							<p>{{ b.content|u.truncate(200,'...',false) }}</p>
+							<p>{{ b.content|u.truncate(100,'...',false) }}</p>
 							<a href="" class="btn btn-main">Read More</a>
 						</div>
 					</div>
@@ -30,15 +30,5 @@
 
 		</div>
 
-
-		<nav aria-label="Page navigation example">
-			<ul class="pagination post-pagination justify-content-center">
-				<li class="page-item"><a class="page-link" href="blog-grid.html">Prev</a></li>
-				<li class="page-item"><a class="page-link" href="blog-grid.html">1</a></li>
-				<li class="page-item"><a class="page-link" href="blog-grid.html">2</a></li>
-				<li class="page-item"><a class="page-link" href="blog-grid.html">3</a></li>
-				<li class="page-item"><a class="page-link" href="blog-grid.html">Next</a></li>
-			</ul>
-		</nav>
 	</div>
 </div>

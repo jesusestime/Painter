@@ -1,0 +1,42 @@
+<section class="page-title bg-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Achievements</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quibusdam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="page-wrapper pricing-table section-card bg-gray">
+	<div class="container">
+		<div class="row">
+            {% for p in paints %}
+                <div class="col-md-6">
+                    <div class="post  pricing-item p-4">
+                        <div class="post-thumb">
+                            <a href="">
+                                <img class="img-fluid" src="{{ p.file }}">
+                            </a>
+                        </div>
+                        <h3 class="post-title"><a href="">{{ p.name }}</a></h3>
+                        <div class="post-meta">
+                            <small class=""><i class="ion-calendar"></i>  Posted {{ p.createdat |ago}}</small>
+                        </div>
+                        <div class="post-content  animated fadeInUp">
+                            <p>{{ p.description|u.truncate(110,'...',false) }}</p>
+                            <a href="blog-single.html" class="btn btn-main">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="">
+      {{ knp_pagination_render(paints,'layout/pagination.html.twig') }}
+    </div>
+</div>
+
