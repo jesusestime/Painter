@@ -30,8 +30,11 @@ symfony console:database:create
 symfony serve -d
 ```
 
-## Usage
+## Add fixtures for test
+```bash
+symfony console doctrine:fixtures:load 
 
+```
 
 
 ## Contributing
