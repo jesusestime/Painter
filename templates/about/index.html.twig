@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+
+<section class="about section page-title  bg-3 ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="block">
+					<div class="section-title">
+						<h1 >About Us</h1>
+						<p>{{ painter.lastname }}  {{ painter.firstname }}</p>
+					</div>
+					<p>{{ painter.about }}</p>
+				</div>
+			</div><!-- .col-md-7 close -->
+			<div class="col-md-5">
+				<div class="block">
+					<img src="img/paint-4.jpg" alt="Img">
+				</div>
+			</div><!-- .col-md-5 close -->
+		</div>
+	</div>
+</section>
+{% endblock %}
