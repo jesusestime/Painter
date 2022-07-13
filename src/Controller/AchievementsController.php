@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Paint;
 use App\Repository\PaintRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,4 +24,13 @@ class AchievementsController extends AbstractController
         );
         return $this->render('achievements/index.html.twig',compact('paints'));
     }
+
+    #[Route('/achievements/{slug}', name: 'app_achievement_detail')]
+    public function detail(string $slug ,Paint $paint,Request $request): Response
+    {  
+        return $this->render('achievements/detail.html.twig',compact('paint'));
+    }
+
+
+
 }
