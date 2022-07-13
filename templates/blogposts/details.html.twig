@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blogposts{% endblock %}
+
+{% block body %}
+
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Blogpost details</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quibusdam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="post post-single">
+					<h2 class="post-title">{{ blogposts.title }}</h2>
+					<div class="post-meta ml-1">
+						<ul>
+							<li>
+								<i class="ion-calendar"></i>  Posted  {{ blogposts.createdAt|ago }}
+							</li>
+
+						</ul>
+					</div>
+					<div class="post-content post-excerpt">
+						
+							<p>
+								{{ blogposts.content }}
+							</p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
