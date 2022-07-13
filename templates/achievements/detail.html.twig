@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Achievements{% endblock %}
+
+{% block body %}
+<div class="my-5">
+<section class="portfolio-single-page">
+  <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-8 col-lg-7">
+                <div class="portfolio-single-slider">
+                    <div>
+                        <img class="img-fluid img-thumbnail" src="{{ asset(paint.file) }}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 mt-5 mt-lg-0">
+
+                <div class="project-details">
+                    <h4 class="">{{ paint.name }}</h4>
+                    <p>{{ paint.description }}</p>
+                    <ul>
+                        <li><span><i class="fa fa-shirtsinbulk "></i> Completion date :</span><strong>{{ paint.dateCompletion| date("m/d/Y") }}</strong></li>
+                        <li><span><i class="fa fa-shield "></i> Lenght : </span><strong>{{ paint.lenght }} CM</strong></li>
+                        <li><span><i class="fa fa-ils "></i> Height : </span><strong>{{ paint.height }} CM</strong></li>
+                        {% if paint.onSale %}
+                            <li><span><i class="icon-calendar3"></i>Price :</span> {{ paint.price }} $</li>
+                        {% endif %}
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+  </div>
+<section>
+</div>
+{% endblock %}
