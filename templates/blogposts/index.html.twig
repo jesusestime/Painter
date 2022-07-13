@@ -22,13 +22,13 @@
             {% for b in blogposts %}
                 <div class="col-md-4">
                     <div class="post  pricing-item p-4">
-                        <h3 class="post-title"><a href="">{{ b.title }}</a></h3>
+                        <h3 class="post-title"><a href="{{ path('app_blogposts_detail',{'slug': b.slug}) }}">{{ b.title }}</a></h3>
                         <div class="post-meta">
                            <small class=""><i class="ion-calendar"></i>  Posted {{ b.createdat |ago}}</small>
                         </div>
                         <div class="post-content   animated fadeInUp">
                            <p>{{ b.content|u.truncate(100,'...',false) }}</p>
-                            <a href="blog-single.html" class="btn btn-main">Read More</a>
+                            <a href="{{ path('app_blogposts_detail',{'slug': b.slug}) }}" class="btn btn-main">Read More</a>
                         </div>
                     </div>
                 </div>
