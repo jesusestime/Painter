@@ -107,6 +107,10 @@ $(document).ready(function () {
 		fixedContentPos: true,
 		fixedBgPos: true
 	});
+	$('.fluffychicken').magnificPopup({ 
+		type: 'image'
+		
+	 });
 
 	//  Count Up
 	function counter() {

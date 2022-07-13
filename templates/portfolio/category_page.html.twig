@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category.slug }}{% endblock %}
+
+{% block body %}
+    <section class="page-title  bg-3 ">
+        {% set img = category.paints|last %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="block">
+                        <div class="">
+                            <h1 >{{ category.name }}</h1>
+                        </div>
+                        <p>{{ category.description }}</p>
+                    </div>
+                </div><!-- .col-md-7 close -->
+                <div class="col-md-5">
+                    <div class="block">
+                        <img src="{{  img.file }}" alt="Img">
+                    </div>
+                </div><!-- .col-md-5 close -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="page-wrapper portfolio-work">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        
+                        <div class="row shuffle-wrapper">
+                            {% for p in paints %}
+                                <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item">
+                                    <img src="{{ p.file  }}" alt=""  >
+                                    <div class="portfolio-hover">
+                                        <div class="portfolio-content">
+                                            <a href="{{ p.file  }}" class="portfolio-popup"><i class="icon ion-search"></i></a>
+                                            <a class="h3" href="">{{ p.name }}</a>
+                                            <p>{{ p.description|u.truncate(10,'...',false) }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
