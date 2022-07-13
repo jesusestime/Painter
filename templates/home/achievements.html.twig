@@ -22,7 +22,7 @@
 						<h2>{{ p.name }}</h2>
 						<small class=""><i class="ion-calendar"></i>  Posted {{ p.createdat |ago}}</small>
 						<p>{{ p.description|u.truncate(200,'...',false) }}</p>
-						<a href="" class="btn btn-small mt-0">View paint</a>
+						<a href="{{ path('app_achievement_detail',{'slug': p.slug}) }}" class="btn btn-small mt-0">View paint</a>
 					</div>
 				</div>
 			</div>
